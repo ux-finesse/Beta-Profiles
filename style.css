@@ -7,23 +7,28 @@
     line-height: 1.5;
 }
 
+header{
+    background-color: #1D1D1F;
+}
+
 body{
     background-color: black;
     
 }
 
-.navbar{
-    background-color: #1D1D1F;
-    /* width: 100%; */
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar-container{
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     height: 60px;
-    gap: 788px;
-    max-width: 1308px;
+    width: 100%;
+    max-width: 1320px;
+    padding: 16px;
     display: flex;
-    
 }
 
 .navbar-dropdown a{
@@ -46,7 +51,6 @@ body{
 
 .navbar-left{
     display: flex;
-    padding: 10px 0 10px 0;
     gap: 40px;
 }
 
@@ -57,7 +61,8 @@ body{
 
 .navbar-links{
     display: flex;
-    align-items: center;
+    float: right;
+    margin-left: auto;
 }
 
 .navbar-links a{
@@ -70,11 +75,6 @@ body{
     background-color: #49a9ee2b
 }
 
-main{
-    width: 100%;
-    justify-content: center;
-    max-width: 1700px;
-}
 
 .hero-section{
     width: 100%;
@@ -128,14 +128,18 @@ main{
 }
 
 .op-sys-container{
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: baseline;
     gap: 55px;
-    min-width: 690px;
-    margin-bottom: 40px;
+    max-width: 690px;
+    margin: 0 auto 40px;
     width: 100%;
-    justify-content: center;
 }  
+
+/* .op-sys-container img{
+    width: auto;
+} */
 
 .op-sysp{
     padding-top: 10px;
@@ -157,8 +161,10 @@ main{
 .links-container{
     display: flex;
     justify-content: center;
-    max-width: 1680px;
     gap: 40px;
+    width: 100%;
+    padding: 16px;
+    margin: 0 auto;
     color: #ffffff95;
 }
 
@@ -173,27 +179,26 @@ main{
 }
 
 .mid-section{
-    /* display: block; */
-    padding-top: 54px;
+    margin-top: 84px;
     justify-content: center;
-    margin-top: 30px;
     background-color: #111111;
     height: auto;
     text-decoration: none;
+    width: 100%;
+    padding: 16px;
 }
 
 .mid-not1{
     width: 100%;
+    max-width: 1320px;
     height: 56px;
     background-color: #172731;
     align-items: center;
     display: flex;
-    gap: 728px;
-    margin: 0 auto 20px auto;
+    margin: 50px auto 20px auto;
     border: 1px solid #1992d468;
     border-left: 6px solid #1992d4;
     border-radius: 5px;
-    max-width: 1308px;
     
     
 }
@@ -201,15 +206,14 @@ main{
 .mid-not2{
     width: 100%;
     height: 56px;
+    max-width: 1320px;
     background-color: #3E3B16;
     align-items: center;
     display: flex;
     margin: 0 auto;
-    gap: 215px;
     border: 1px solid #d4c03f68;
     border-left: 6px solid #D4BF3F;
     border-radius: 5px;
-    max-width: 1308px;
 }
 
 .mid-not1 p{
@@ -260,9 +264,11 @@ main{
 .mid-not1 button{
     width: 55px;
     display: flex;
+    float: right;
     justify-content: center;
     align-content: center;
     height: 55px;
+    margin-left: auto;
     background: none;
     border: none;
 }
@@ -270,49 +276,44 @@ main{
 .mid-not2 button{
     width: 55px;
     display: flex;
+    float: right;
     justify-content: center;
     align-content: center;
     height: 55px;
+    margin-left: auto;
     background: none;
     border: none;
 }
 
 .download-section{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    margin: 40px auto 40px auto;
-    max-width: 1308px;
+    max-width: 1320px;
+    gap: 26px;
+    margin: 40px auto;
     color: whitesmoke;
     text-align: center;
+    grid-template-areas: 
+    'card1 card2 card3'
+    'card1 card2 card3'
+    'card1 card2 card3'
+    ;
 }
 
 .card-1-container, .card-2-container, 
 .card-3-container, .card-4-container, 
 .card-5-container, .card-6-container, .card-7-container{
-    margin: 20px 0 50px 0;
+    margin: 20px 0 50px;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 
-.card-2, .card-5{
+.card-1, .card-2, .card-3, .card-4, 
+.card-5, .card-6, .card-7{
     width: 422px;
-    /* height: 679.417px; */
-    margin-top: 25px;
-    padding-top: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-radius: 23px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* margin: 0 auto; */
-    /* padding: 20px; */
-}
-
-.card-1, .card-3, .card-4, .card-6, .card-7{
-    width: 422px;
-    /* height: 679.417px; */
-    padding-top: 50px;
+    padding: 50px 0 0;
     margin-top: 25px;
     border-radius: 23px;
 }
@@ -380,7 +381,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #e0ad4b;
     text-align: center;
     font-weight: bold;
@@ -395,7 +396,7 @@ main{
     background: none;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     justify-content: center;
     margin: 25px 0 0 0;
     font-size: 13px;
@@ -408,7 +409,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #457cde;
     text-align: center;
     font-weight: bold;
@@ -423,7 +424,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #6cab43;
     text-align: center;
     font-weight: bold;
@@ -438,7 +439,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #d467a7;
     text-align: center;
     font-weight: bold;
@@ -453,7 +454,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #b96ee5;
     text-align: center;
     font-weight: bold;
@@ -468,7 +469,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #ea6588;
     text-align: center;
     font-weight: bold;
@@ -483,7 +484,7 @@ main{
     border-bottom-left-radius: 5px;
     align-items: center;
     display: flex;
-    padding: 5px 9px 5px 9px;
+    padding: 5px 9px;
     color: #ea6588;
     text-align: center;
     font-weight: bold;
@@ -540,18 +541,17 @@ main{
 .card-img img{
     width: 420px;
     height: 300px;
-    margin: 40px auto 0 0;  
+    margin: 40px auto 0;  
 }
 
 .donate-section{
     width: 100%;
-    max-width: 1308px;
+    max-width: 1320px;
     height: 336.4px;
     display: flex;
     border-radius: 23px;
     justify-content: center;
-    padding: 0 5px 0 0;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     overflow: hidden;
     background-color: #1e1e1e;
 }
@@ -572,7 +572,7 @@ main{
 .btn-donate-container{
     display: flex;
     justify-content: space-evenly;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 0;
     max-width: 340px;
 }
 
@@ -615,34 +615,23 @@ main{
 }
 
 .download-section1{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    margin: 50px auto 0 auto;
-    max-width: 1308px;
+    max-width: 1320px;
+    gap: 26px;
+    margin: 40px auto;
     color: whitesmoke;
     text-align: center;
+    grid-template-areas: 
+    'card1 card2 card3'
+    'card1 card2 card3'
+    'card1 card2 card3'
+    ;
 }
 
-.card-2-2, .card-5-5{
+.card-1-1, .card-2-2, .card-3-3, 
+.card-4-4, .card-5-5, .card-6-6, .card-7-7{
     width: 422px;
-    /* height: 679.417px; */
-    margin-top: 25px;
-    padding-top: 50px;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-radius: 23px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* margin: 0 auto; */
-    /* padding: 20px; */
-}
-
-.card-1-1, .card-3-3, .card-4-4, .card-6-6, .card-7-7{
-    width: 422px;
-    /* height: 679.417px; */
     padding-top: 50px;
     margin-top: 25px;
     border-radius: 23px;
@@ -800,9 +789,8 @@ footer{
 
 .footer-container{
     display: flex;
-    /* justify-content: center; */  
-    margin: 0 auto 0 auto;
-    max-width: 1308px;
+    margin: auto;
+    max-width: 1320px;
 }
 
 .footer-container p, ul, a{
@@ -874,5 +862,155 @@ footer{
 
 .bottom-right {
     font-size: 12px;
+
+}
+
+@media all and (max-width: 480px){
+
+    .hero-text {
+        font-size: 42px;
+      }
+
+    .hero-caption {
+        font-size: 20px;
+      }
+    
+    .back-img img{
+        width: 100%;
+        height: 345px;
+    }
+
+    .navbar-links{
+        display: none;
+    }
+
+    .navbar-dropdown{
+        display: none;
+    }
+
+    .op-sys-container{
+        gap: 10px;
+        max-width: 324px;
+        margin: 0 auto 40px;
+    }
+
+    .op-sys-item2, .op-sys-item5{
+        display: none;
+    }
+
+    .mid-not1, .mid-not2{
+        width: 100%;
+        padding: 5px;
+        height: auto;
+    }
+
+    .mid-not1, .mid-not2 p {
+        font-size: 14px;
+    }
+
+    .links-container{
+        gap: 33px;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .download-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card-1-container, .card-2-container, .card-3-container, .card-4-container, .card-5-container, .card-6-container, .card-7-container {
+        width: 100%;
+    }
+
+    .card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7 {
+        width: 100%;
+    }
+
+      .download-section1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card-1-1, .card-2-2, .card-3-3, .card-4-4, .card-5-5, .card-6-6, .card-7-7 {
+        width: 100%;
+        
+    }
+
+    .card-img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .donate-section {
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px 20px 0;
+        height: auto;
+    }
+    
+
+    .donate-img {
+        width: 100%;
+    }
+
+    .donate-caption {
+        margin: 0;
+    }
+
+    .donate-caption p{
+        font-size: 14px;
+    }
+
+    .donate-img img{
+        width: 100%;
+        justify-content: center;
+        object-fit: contain;
+        display: flex;
+        height: auto;
+
+    }
+
+    footer {
+        height: 396.8px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .footer-left{
+        width: 100%;
+        margin: 30px 0 0;
+    }
+
+    .footer-right{
+        display: grid;
+        grid-auto-flow: column;
+        margin: 30px 0 10px;
+        width: 100%;
+        gap:50px
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        padding: 16px;
+        gap:0px;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .bottom-right{
+        margin-top: 0;
+        text-align: center;
+
+    }
+
+    .footer-bottom p{
+        margin: 0;
+    }
 
 }
